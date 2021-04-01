@@ -12,6 +12,8 @@
 </head>
 
 <body id="body">
+    <div id="overlay"></div>
+    <div id="spinner"></div>
     <section>
         <div class="container">
             <div class="header">
@@ -38,6 +40,13 @@
         </div>
     </section>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script>
+        document.body.setAttribute("class", "noscroll");
+
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("spinner").style.display = "block";
+    </script>
 </body>
 
 </html>

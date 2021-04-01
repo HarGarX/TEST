@@ -24,6 +24,7 @@ class PhotoGallery {
             this.getImgs(this.gallries[this.pageNumber]);
             document.getElementById("load").addEventListener("click", function() {
                 // console.log(this.pageNumber);
+
             });
         });
     }
@@ -46,6 +47,12 @@ class PhotoGallery {
         this.populateImgs(data.photos.photo); // html builder with photos from api 
     }
 
+
+
+
+
+
+
     // make the html item elements from imgs src from api 
     populateImgs(photos) {
 
@@ -63,6 +70,13 @@ class PhotoGallery {
             console.log(`"https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg"`);
 
         });
+
+
+
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+
+        document.body.className = document.body.className.replace(/\bnoscroll\b/, '');
     }
 
 
